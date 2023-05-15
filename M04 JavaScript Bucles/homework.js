@@ -119,7 +119,12 @@ function esEntero(num) {
    // De lo contrario, retorna false.
    // Tu código:
 
-   
+   if ((Math.floor(num)-num)!=0) {
+      return false;
+   }
+   else return true; 
+
+
 }
 
 function fizzBuzz(num) {
@@ -128,6 +133,21 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
+
+   if (num%3===0 && num%5===0) {
+      return "fizzbuzz";
+   }
+
+      if ( num%3===0 ) { 
+         return "fizz";
+      }
+       
+      if (num%5===0) {
+         return "buzz";
+      }
+
+   else return false;
+
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -138,6 +158,8 @@ function operadoresLogicos(num1, num2, num3) {
    // Si todos los argumentos son cero, retornar ---> "Error".
    // Si no se cumple ninguna de las condiciones anteriores, retornar false.
    // Tu código:
+
+
 }
 
 function esPrimo(num) {
@@ -153,12 +175,22 @@ function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+   if (valor===true) {
+      return "Soy verdadero";
+   }
+   else return "Soy falso";
 }
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+   var str = num.toString();
+
+   if (str.length===3) {
+      return true;
+   } 
+   else return false;
 }
 
 function doWhile(num) {
@@ -166,6 +198,18 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+  var  resultado = num;
+   let i= 0;
+
+   do { 
+      i = i+1; 
+      resultado = resultado+5;
+
+   } while (i<8);
+   return resultado;
+  
+   
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
